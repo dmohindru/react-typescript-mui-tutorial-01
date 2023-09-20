@@ -1,7 +1,28 @@
-import { Stack, Button, IconButton, ButtonGroup } from "@mui/material"
+import { Stack, Button, IconButton, ButtonGroup, ToggleButtonGroup, ToggleButton } from "@mui/material"
 import SendIcon from '@mui/icons-material/Send';
+import FormatBoldIcon from '@mui/icons-material/FormatBold';
+import FormatItalicIcon from '@mui/icons-material/FormatItalic';
+import FormatUnderlinedIcon from'@mui/icons-material/FormatUnderlined';
+import { useState } from "react";
+import { Typography } from "@mui/material";
 
 export const MuiButton = () => {
+    const [formats, setFormats] = useState<string | null>(null);
+    const [nonExclusiveFormats, setNonExclusiveFormats] = useState<string[]>([]);
+    
+    console.log(formats);
+    console.log(nonExclusiveFormats);
+
+    const handleFormatChange = (_event: React.MouseEvent<HTMLElement>, updatedFormats: string | null) => {
+        setFormats(updatedFormats);
+        
+    };
+
+    const handleNonExclusiveFormatChange = (_event: React.MouseEvent<HTMLElement>, updatedNonExclusiveFormats: string[]) => {
+        setNonExclusiveFormats(updatedNonExclusiveFormats);
+        
+    }
+    
     return (
         <Stack spacing={4}>
             <Stack spacing={2} direction='row'>
@@ -33,6 +54,27 @@ export const MuiButton = () => {
                     <Button>Center</Button>
                     <Button>Right</Button>
                 </ButtonGroup>
+            </Stack>
+            
+            <Stack direction='column'>
+                {/* Exclusive button group */}
+                <Typography variant='subtitle1'>Exclusive Button Group</Typography>
+                <ToggleButtonGroup aria-label='text formatting' value={formats} onChange={handleFormatChange} size='small' color='success' orientation='horizontal' exclusive>
+                    <ToggleButton value='bold' aria-label='bold'><FormatBoldIcon/></ToggleButton>
+                    <ToggleButton value='italic' aria-label='italic'><FormatItalicIcon/></ToggleButton>
+                    <ToggleButton value='underlined' aria-label='underlined'><FormatUnderlinedIcon/></ToggleButton>
+                </ToggleButtonGroup>
+            </Stack>
+
+            
+            <Stack direction='column'>
+                {/* Non Exclusive button group */}
+                <Typography variant='subtitle1'>Non Exclusive Button Group</Typography>
+                <ToggleButtonGroup aria-label='text formatting non exclusive' value={nonExclusiveFormats} onChange={handleNonExclusiveFormatChange} size='small' color='success' orientation='horizontal'>
+                    <ToggleButton value='bold-non-exclusive' aria-label='bold non exclusive'><FormatBoldIcon/></ToggleButton>
+                    <ToggleButton value='italic-non-exclusive' aria-label='italic non exclusive'><FormatItalicIcon/></ToggleButton>
+                    <ToggleButton value='underlined-non-exclusive' aria-label='underlined non exclusive'><FormatUnderlinedIcon/></ToggleButton>
+                </ToggleButtonGroup>
             </Stack>
         </Stack>
     )
