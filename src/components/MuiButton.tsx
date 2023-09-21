@@ -10,15 +10,17 @@ export const MuiButton = () => {
     const [formats, setFormats] = useState<string | null>(null);
     const [nonExclusiveFormats, setNonExclusiveFormats] = useState<string[]>([]);
     
-    console.log(formats);
-    console.log(nonExclusiveFormats);
+    // console.log(formats);
+    // console.log(nonExclusiveFormats);
 
     const handleFormatChange = (_event: React.MouseEvent<HTMLElement>, updatedFormats: string | null) => {
+        console.log(updatedFormats);
         setFormats(updatedFormats);
         
     };
 
     const handleNonExclusiveFormatChange = (_event: React.MouseEvent<HTMLElement>, updatedNonExclusiveFormats: string[]) => {
+        console.log(updatedNonExclusiveFormats);
         setNonExclusiveFormats(updatedNonExclusiveFormats);
         
     }
