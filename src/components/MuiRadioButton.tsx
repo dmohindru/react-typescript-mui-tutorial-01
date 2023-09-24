@@ -1,4 +1,4 @@
-import { Box, FormControl, FormLabel, FormControlLabel, RadioGroup, Radio, FormHelperText } from "@mui/material"
+import { Box, FormControl, FormLabel, FormControlLabel, RadioGroup, Radio, FormHelperText } from "@mui/material";
 import { useState } from 'react';
 
 export const MuiRadioButton = () => {
