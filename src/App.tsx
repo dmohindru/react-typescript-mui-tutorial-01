@@ -13,6 +13,9 @@ import { MuiLayoutGrid } from './components/MuiLayoutGrid';
 import { MuiCard } from './components/MuiCard';
 import { MuiAccordion } from './components/MuiAccordion';
 import { MuiImageList } from './components/MuiImageList';
+import { MuiNavbar } from './components/MuiNavbar';
+import { MuiLink } from './components/MuiLink';
+import { MuiBreadcrumbs } from './components/MuiBreadcrumbs';
 
 function App() {
   return (
@@ -30,7 +33,9 @@ function App() {
       {/* <MuiLayoutGrid /> */}
       {/* <MuiCard /> */}
       {/* <MuiAccordion /> */}
-      <MuiImageList />
+      {/* <MuiImageList /> */}
+      <MuiNavbar />
+      <MuiBreadcrumbs />
     </div>
   );
 }
