@@ -2,6 +2,13 @@ import { Stack, Skeleton, Box, Avatar, Typography } from '@mui/material'
 import { useState, useEffect } from 'react'
 export const MuiSkeleton = () => {
     const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+          setLoading(false);  
+        }, 3000);
+    }, [])
+
     return (
         // <Stack spacing={1}>
         //     <Skeleton variant='text' />
@@ -22,7 +29,18 @@ export const MuiSkeleton = () => {
                     (<Avatar>V</Avatar>)
                 }
                 <Stack sx={{width:'80%'}}>
-                    
+                    {
+                        loading ? 
+                        (<>
+                            <Typography variant='body1'>
+                                <Skeleton variant='text' width='100%' animation='wave' />
+                            </Typography>
+                            <Typography variant='body2'>
+                                <Skeleton variant='text' width='100%' animation='wave' />
+                            </Typography>
+                        </>)
+                        : (<><Typography variant='body1'>React MUI Tutorial</Typography></>)
+                        }
                 </Stack>
             </Stack>
         </Box>
