@@ -1,5 +1,10 @@
 import './App.css';
-import { MuiSkeletonSimple } from './components/MuiSkeltonSimple';
+import { MuiTimeline } from './components/MuiTimeline';
+// import { MuiLoadingButton } from './components/MuiLoadingButton';
+// import { MuiTabs } from './components/MuiTabs';
+// import { LocalizationProvider } from '@mui/lab';
+// import AdapterDateFns from '@mui/lab/AdapterDateFns'
+// import { MuiSkeletonSimple } from './components/MuiSkeltonSimple';
 // import { MuiProgress } from './components/MuiProgress';
 // import { MuiSkeleton } from './components/MuiSkeleton';
 // import { MuiAlert } from './components/MuiAlert';
@@ -34,6 +39,7 @@ import { MuiSkeletonSimple } from './components/MuiSkeltonSimple';
 
 function App() {
   return (
+    // <LocalizationProvider dateAdapter={AdapterDateFns}>
     <div className="App">
       {/* <MuiTypography /> */}
       {/* <MuiButton /> */}
@@ -65,8 +71,12 @@ function App() {
       {/* <MuiDialog /> */}
       {/* <MuiProgress /> */}
       {/* <MuiSkeleton /> */}
-      <MuiSkeletonSimple />
+      {/* <MuiSkeletonSimple /> */}
+      {/* <MuiLoadingButton /> */}
+      {/* <MuiTabs /> */}
+      <MuiTimeline />
     </div>
+    // </LocalizationProvider>
   );
 }
 
