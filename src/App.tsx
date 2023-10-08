@@ -1,6 +1,8 @@
 import './App.css';
-import { MuiMasonry } from './components/MuiMasonry';
-import { MuiTimeline } from './components/MuiTimeline';
+import { createTheme, colors, ThemeProvider } from '@mui/material';
+// import { MuiMasonry } from './components/MuiMasonry';
+import { MuiResponsiveness } from './components/MuiResponsiveness';
+// import { MuiTimeline } from './components/MuiTimeline';
 // import { MuiLoadingButton } from './components/MuiLoadingButton';
 // import { MuiTabs } from './components/MuiTabs';
 // import { MuiSkeletonSimple } from './components/MuiSkeltonSimple';
@@ -36,9 +38,25 @@ import { MuiTimeline } from './components/MuiTimeline';
 // import { MuiChip } from './components/MuiChip';
 // import { MuiTooltip } from './components/MuiTootip';
 
+const theme = createTheme({
+  status: {
+    danger: '#e53e3e'
+  },
+  palette: {
+    secondary: {
+      main: colors.orange[500]
+    },
+    neutral: {
+      main: colors.grey[500],
+      darker: colors.grey[700]
+
+    }
+  }
+});
 function App() {
   return (
     // <LocalizationProvider dateAdapter={AdapterDateFns}>
+    <ThemeProvider theme={theme}>
     <div className="App">
       {/* <MuiTypography /> */}
       {/* <MuiButton /> */}
@@ -74,8 +92,10 @@ function App() {
       {/* <MuiLoadingButton /> */}
       {/* <MuiTabs /> */}
       {/* <MuiTimeline /> */}
-      <MuiMasonry />
+      {/* <MuiMasonry /> */}
+      <MuiResponsiveness />
     </div>
+    </ThemeProvider>
     // </LocalizationProvider>
   );
 }
