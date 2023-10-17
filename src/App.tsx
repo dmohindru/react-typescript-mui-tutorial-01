@@ -1,7 +1,8 @@
 import './App.css';
 import { createTheme, colors, ThemeProvider } from '@mui/material';
 // import { MuiMasonry } from './components/MuiMasonry';
-import { MuiResponsiveness } from './components/MuiResponsiveness';
+// import { MuiResponsiveness } from './components/MuiResponsiveness';
+import { MuiExamples } from './components/MuiExamples';
 // import { MuiTimeline } from './components/MuiTimeline';
 // import { MuiLoadingButton } from './components/MuiLoadingButton';
 // import { MuiTabs } from './components/MuiTabs';
@@ -93,7 +94,8 @@ function App() {
       {/* <MuiTabs /> */}
       {/* <MuiTimeline /> */}
       {/* <MuiMasonry /> */}
-      <MuiResponsiveness />
+      {/* <MuiResponsiveness /> */}
+      <MuiExamples />
     </div>
     </ThemeProvider>
     // </LocalizationProvider>
