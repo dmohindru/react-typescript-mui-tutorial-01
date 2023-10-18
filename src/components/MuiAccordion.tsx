@@ -1,4 +1,4 @@
-import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
+import { Accordion, AccordionSummary, AccordionDetails, Typography, Box } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useState } from 'react';
 
@@ -10,7 +10,7 @@ export const MuiAccordion = () => {
     }
 
     return (
-        <div>
+        <Box>
             <Accordion expanded={ expanded === 'panel1'} onChange={(event, isExpanded) => handleChange(isExpanded, 'panel1')}>
                 <AccordionSummary 
                     id='panel1-header' 
@@ -44,7 +44,7 @@ export const MuiAccordion = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eligendi doloremque consequuntur perspiciatis amet expedita architecto alias quod optio beatae nam, accusamus velit. Fugit at repellat distinctio iure harum quisquam.
                 </AccordionDetails>
             </Accordion>
-        </div>
+        </Box>
     )
 
 }
